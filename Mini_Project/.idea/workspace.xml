@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="99f28d30-66fe-4dd8-b6a9-fb2a50504b47" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/java/com/companydu/crud_mini_project/entity/CartDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/java/com/companydu/crud_mini_project/entity/GoodsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/java/com/companydu/crud_mini_project/entity/OrderDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/java/com/companydu/crud_mini_project/entity/UsersDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/java/com/companydu/crud_mini_project/repository/CartOrderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/java/com/companydu/crud_mini_project/repository/GoodsDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/java/com/companydu/crud_mini_project/repository/UsersDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/static/css/logRg.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/cart/cartDelete_Process.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/cart/cartForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/cart/cart_Process.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/goods/goods.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/goods/goodsCreateForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/goods/goodsCreateForm_Process.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/goods/goodsDelete_Process.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/goods/goodsList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/login/loginCheck.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/login/loginForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/login/loginForm_Process.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/login/logout.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/login/registerForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/login/registerForm_Process.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/login/registerForm_Result.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/order/orderForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/order/orderList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/order/orderSuccessForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/order/order_Process.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/users/userDelete_Process.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/users/userForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/users/userUpdateForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crud_mini_project/src/main/resources/webapp/WEB-INF/views/board/users/userUpdateForm_Process.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sb0313/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../sb0313/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sb0313/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../sb0313/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sb0313/src/test/java/com/companydu/sb0313/Sb0313ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sb0313/src/test/java/com/companydu/sb0313/Sb0313ApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Hyeong6551"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Hyeong6551/springboot.git",
+    "accountId": "e7aca953-af15-4753-9a4b-529a8c10033c"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2uHhW4v6DxdTuBjsPrQwy8hVdFY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/5month_springboot/Mini_Project",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.39" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.39" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="99f28d30-66fe-4dd8-b6a9-fb2a50504b47" name="Changes" comment="" />
+      <created>1741911435925</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741911435925</updated>
+      <workItem from="1741911437038" duration="7000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
