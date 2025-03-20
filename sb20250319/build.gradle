@@ -20,6 +20,8 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // bootstrap
     implementation 'org.webjars:bootstrap:5.3.3'
 
     // jsp 설정
@@ -27,6 +29,20 @@ dependencies {
     implementation 'jakarta.servlet:jakarta.servlet-api'
     implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api'
     implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'
+//    implementation 'javax.servlet:jstl:1.2'
+
+    // JPA
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // lombok
+    implementation 'org.projectlombok:lombok'
+    annotationProcessor('org.projectlombok:lombok')
+
+    // validation
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // mysql
+    runtimeOnly 'com.mysql:mysql-connector-j'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'

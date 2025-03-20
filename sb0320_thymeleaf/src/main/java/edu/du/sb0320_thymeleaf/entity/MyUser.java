@@ -22,5 +22,6 @@ public class MyUser {
     private LocalDateTime createdAt;
 
     @PrePersist
+    // entity 객체가 entity manager에 들어가 저장되기 전 실행
     protected void onCreate() { createdAt = LocalDateTime.now(); }
 }

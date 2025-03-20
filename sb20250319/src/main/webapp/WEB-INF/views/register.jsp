@@ -1,32 +1,34 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: hyeong
-  Date: 25. 3. 19.
-  Time: 오후 6:30
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>회원가입 폼</title>
-  <link href="/resources/static/css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <jsp:include page="header.jsp" />
-<form action="/action_page.php">
+
+<form:form action="/register" method="post" modelAttribute="userDto">
   <div class="container">
-    <h1>Register</h1>
+    <h1>회원가입</h1>
     <p>Please fill in this form to create an account.</p>
     <hr>
 
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+    <label for="id"><b>아이디</b></label><br>
+    <form:errors path="id" cssClass="errorMsg"/>
+    <form:input path="id" placeholder="아이디를 입력해주세요" name="id" id="id" />
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    <label for="password"><b>비밀번호</b></label><br>
+    <form:errors path="password" cssClass="errorMsg"/>
+    <form:password path="password" placeholder="비밀번호를 입력해주세요" name="password" id="password"/>
 
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    <label for="name"><b>이름</b></label><br>
+    <form:errors path="name" cssClass="errorMsg"/>
+    <form:input path="name" placeholder="아이디를 입력해주세요" name="name" id="name" />
+
+    <label for="email"><b>이메일</b></label>
+    <form:input path="email" placeholder="이메일을 입력해주세요" name="email" id="email" />
+
     <hr>
     <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
@@ -34,9 +36,10 @@
   </div>
 
   <div class="container signin">
-    <p>Already have an account? <a href="#">Sign in</a>.</p>
+    <p>Already have an account? <a href="/login">Sign in</a>.</p>
   </div>
-</form>
+</form:form>
+
 <jsp:include page="footer.jsp" />
 </body>
 </html>

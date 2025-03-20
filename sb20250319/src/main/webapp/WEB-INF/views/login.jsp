@@ -1,31 +1,26 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: hyeong
-  Date: 25. 3. 19.
-  Time: 오후 6:30
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>로그인 폼</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<form action="/action_page.php">
-    <div class="mb-3 mt-3">
-        <label for="email" class="form-label">Email:</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+<jsp:include page="header.jsp" />
+<form:form action="/login" method="post" modelAttribute="userDto">
+    <div class="container my-5">
+        <label for="id"><b>아이디</b></label>
+        <form:input path="id" placeholder="아이디를 입력해주세요" name="id" id="id" />
+
+        <label for="password"><b>비밀번호</b></label>
+        <form:password path="password" placeholder="비밀번호를 입력해주세요" name="password" id="password" />
+
+        <button type="submit" class="btn btn-primary">로그인</button>
+        <p>계정이 없으신가요?<a href="/register">계정 생성</a>.</p>
     </div>
-    <div class="mb-3">
-        <label for="pwd" class="form-label">Password:</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
-    </div>
-    <div class="form-check mb-3">
-        <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" name="remember"> Remember me
-        </label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+</form:form>
+<jsp:include page="footer.jsp" />
 </body>
 </html>
