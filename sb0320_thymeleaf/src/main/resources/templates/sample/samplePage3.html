@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>sample page 3</h2>
+<ul>
+    <li th:each="dto : ${list}">
+        <p th:text="${dto.name}"></p>
+    </li>
+</ul>
+<hr>
+<ul>
+    <li th:each="dto : ${user}">
+        <p th:text="${dto.name}"></p>
+    </li>
+</ul>
+</body>
+</html>

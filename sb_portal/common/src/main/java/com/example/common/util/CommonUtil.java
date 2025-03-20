@@ -44,6 +44,13 @@ public class CommonUtil {
         module2.put("url", "http://localhost:8082/module2/");
         module2.put("icon", "fa-cogs");
         navItems.add(module2);
+
+        // 모듈 3
+        Map<String, String> module3 = new HashMap<>();
+        module3.put("name", "모듈 3");
+        module3.put("url", "http://localhost:8083/module3/");
+        module3.put("icon", "fa-cogs");
+        navItems.add(module3);
         
         return navItems;
     }
