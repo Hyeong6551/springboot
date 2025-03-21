@@ -22,7 +22,6 @@ public class UserDto {
     @NotBlank(message = "{erorr.common.blank}")
     @Size(min = 1, max = 15, message = "{error.name}")
     private String name;
-
     private String email;
 
     public int getNo() {

@@ -11,7 +11,7 @@
     <div class="container mt-5">
         <h2 class="mb-4">사용자 목록</h2>
         <a href="<c:url value='/users/new'/>" class="btn btn-primary mb-3">새 사용자 등록</a>
-        
+
         <table class="table table-striped">
             <thead>
                 <tr>

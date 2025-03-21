@@ -30,7 +30,7 @@ public class IndexController {
     @GetMapping("/login")
     public String login(Model model) {
         model.addAttribute("userDto", new UserDto());
-        return "login";
+        return "user/login";
     }
 
     @PostMapping("/login")
@@ -45,7 +45,7 @@ public class IndexController {
             return "redirect:/";
         } else {
             model.addAttribute("error", "Invalid username or password");
-            return "login";
+            return "user/login";
         }
     }
 
@@ -58,16 +58,15 @@ public class IndexController {
     @GetMapping("/register")
     public String register(Model model) {
         model.addAttribute("userDto", new UserDto());
-        return "register";
+        return "user/register";
     }
 
     @PostMapping("/register")
     public String registerPost(@ModelAttribute("userDto") @Valid UserDto userDto,
                                BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
-            return "register";
+            return "user/register";
         }
-
         UserTb userTb = UserTb.builder()
                 .name(userDto.getName())
                 .password(userDto.getPassword())
