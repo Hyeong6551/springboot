@@ -3,6 +3,9 @@ package edu.du.sb20250319.controller;
 import edu.du.sb20250319.dto.UserDto;
 import edu.du.sb20250319.entity.UserTb;
 import edu.du.sb20250319.repository.UserTbRepo;
+import edu.du.sb20250319.service.BoardService;
+import edu.du.sb20250319.service.ListService;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,19 +15,20 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 @Controller
 public class IndexController {
 
     @Autowired
-    private UserTbRepo userTbRepo;
+    private ListService listService;
 
     @GetMapping("/")
-    public String home() {
-        return "home";
+    public String index() {
+        return "index";
     }
 
     @GetMapping("/login")
@@ -38,7 +42,7 @@ public class IndexController {
             @ModelAttribute UserDto userDto,
             HttpSession session,
             Model model) {
-        List<UserTb> user = userTbRepo.findAllById(userDto.getId());
+        List<UserTb> user = listService.findAllById(userDto.getId());
 
         if (!user.isEmpty() && user.get(0).getPassword().equals(userDto.getPassword())) {
             session.setAttribute("user", userDto.getId());
@@ -73,7 +77,7 @@ public class IndexController {
                 .email(userDto.getEmail())
                 .id(userDto.getId())
                 .build();
-        userTbRepo.save(userTb);
+        listService.save(userTb);
         return "redirect:/";
     }
 }

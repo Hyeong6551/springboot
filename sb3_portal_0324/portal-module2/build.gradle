@@ -1,0 +1,17 @@
+dependencies {
+    implementation project(':portal-common')
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+
+    // Thymeleaf
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+    // DB 연결
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'mysql:mysql-connector-java:8.0.33'
+
+    // 톰캣 런타임
+    runtimeOnly 'org.springframework.boot:spring-boot-starter-tomcat'
+} 

@@ -1,0 +1,21 @@
+dependencies {
+    implementation project(':portal-common')
+
+    implementation 'mysql:mysql-connector-java:8.0.33'  // MySQL 8.0.33 버전 명시
+    // Spring Boot Starter
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    // JSP Support
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+    implementation group: 'org.glassfish.web', name: 'jakarta.servlet.jsp.jstl', version: '2.0.0'
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'   // JdbcTemplate을 위한 의존성
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'
+
+    // ✅ JPA 의존성 (javax.persistence 포함)
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    runtimeOnly 'com.mysql:mysql-connector-j'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+} 

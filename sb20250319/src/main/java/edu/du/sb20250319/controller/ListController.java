@@ -1,7 +1,7 @@
 package edu.du.sb20250319.controller;
 
+import edu.du.sb20250319.dto.UserDto;
 import edu.du.sb20250319.entity.UserTb;
-import edu.du.sb20250319.repository.UserTbRepo;
 import edu.du.sb20250319.service.ListService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,14 +21,21 @@ public class ListController {
     public String list(Model model) {
         List<UserTb> user = listService.findAll();
         System.out.println(user);
-        model.addAttribute("user", user);
-        return "userlist";
+        model.addAttribute("users", user);
+        return "user/userlist";
     }
 
     @GetMapping("/edit/{no}")
     public String edit(@PathVariable int no, Model model) {
-        model.addAttribute("board");
-        return  "edit";
+        UserTb user = listService.findAllByNo(no);
+        model.addAttribute("userDto",user);
+        return  "user/edit";
+    }
+
+    @PostMapping("/edit/{no}")
+    public String edit(@PathVariable int no, @ModelAttribute UserDto userDto) {
+        listService.updateUser(no, userDto);
+        return "redirect:/list";
     }
 
     @GetMapping("/delete/{no}")

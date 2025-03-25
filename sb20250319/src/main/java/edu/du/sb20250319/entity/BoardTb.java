@@ -1,7 +1,6 @@
 package edu.du.sb20250319.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -16,7 +15,7 @@ import java.time.LocalDateTime;
 public class BoardTb {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int no;
 
     @Column(nullable = false)
     private String title;

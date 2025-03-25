@@ -1,0 +1,21 @@
+dependencies {
+    implementation project(':portal-common')
+
+    // Lombok
+    annotationProcessor 'org.projectlombok:lombok'
+    compileOnly 'org.projectlombok:lombok'
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+
+    // MySQL
+    implementation 'mysql:mysql-connector-java:8.0.33'
+
+    // JdbcTemplate
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+
+    // MyBatis
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.4'
+
+    // Thymeleaf
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+} 

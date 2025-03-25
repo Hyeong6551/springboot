@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @ToString
 @Builder
 public class BoardDto {
-    private int id;
+    private int no;
     @NotBlank(message = "{error.title}")
     private String title;
     private String content;
@@ -21,8 +21,8 @@ public class BoardDto {
     private LocalDateTime createdDate;
     private int views;
 
-    public int getId() {
-        return id;
+    public int getNo() {
+        return no;
     }
 
     public String getTitle() {
@@ -45,8 +45,8 @@ public class BoardDto {
         return views;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setNo(int no) {
+        this.no = no;
     }
 
     public void setTitle(String title) {
