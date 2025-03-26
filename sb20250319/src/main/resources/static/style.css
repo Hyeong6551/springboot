@@ -12,6 +12,7 @@ body {
     padding: 16px;
     background-color: white;
     border-radius: 10px;
+    width: 65%;
 }
 
 /* Full-width input fields */
@@ -43,8 +44,10 @@ body {
 
 /* Overwrite default styles of hr */
 hr {
-    border: 1px solid #f1f1f1;
+    background: #504d4d;
     margin-bottom: 25px;
+    height:1px;
+    border:0;
 }
 
 /* Set a style for the submit button */

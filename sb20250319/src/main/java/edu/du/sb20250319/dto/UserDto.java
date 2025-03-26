@@ -1,5 +1,6 @@
 package edu.du.sb20250319.dto;
 
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.*;
@@ -22,6 +23,9 @@ public class UserDto {
     @NotBlank(message = "{erorr.common.blank}")
     @Size(min = 1, max = 15, message = "{error.name}")
     private String name;
+
+    @NotBlank(message = "{erorr.common.blank}")
+    @Email(message = "{error.email}")
     private String email;
 
     public int getNo() {

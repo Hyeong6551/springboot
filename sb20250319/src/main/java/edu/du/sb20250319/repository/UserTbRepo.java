@@ -11,6 +11,9 @@ import java.util.List;
 public interface UserTbRepo extends JpaRepository<UserTb, Integer> {
     List<UserTb> findAllById(String id);
 
+    boolean existsById(String id);
+    boolean existsByEmail(String email);
+
     void deleteByNo(int no);
 
     UserTb findAllByNo(int no);

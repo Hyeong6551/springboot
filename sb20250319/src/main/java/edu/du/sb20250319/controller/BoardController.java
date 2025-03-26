@@ -1,9 +1,7 @@
 package edu.du.sb20250319.controller;
 
 import edu.du.sb20250319.dto.BoardDto;
-import edu.du.sb20250319.dto.UserDto;
 import edu.du.sb20250319.entity.BoardTb;
-import edu.du.sb20250319.entity.UserTb;
 import edu.du.sb20250319.service.BoardService;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
@@ -27,13 +25,7 @@ public class BoardController {
     }
 
     @GetMapping
-    public String board(Model model, HttpSession session, HttpServletResponse response) throws IOException {
-        if(session.getAttribute("user") == null) {
-            response.setContentType("text/html; charset=UTF-8");
-            PrintWriter out = response.getWriter();
-            out.println("<script>alert('로그인이 필요합니다.'); location.href='/';</script>");
-            out.flush();
-        }
+    public String board(Model model) {
         model.addAttribute("boards",boardService.findAll());
         return "board/board";
     }
@@ -66,14 +58,14 @@ public class BoardController {
     @GetMapping("/write")
     public String write(Model model) {
         model.addAttribute("boardDto", new BoardDto());
-        return "board/form";
+        return "board/write";
     }
 
     @PostMapping("/write")
     public String writeForm(@ModelAttribute("boardDto") @Valid BoardDto boardDto,
                                BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
-            return "board/form";
+            return "board/write";
         }
         BoardTb boardTb = BoardTb.builder()
                 .title(boardDto.getTitle())
