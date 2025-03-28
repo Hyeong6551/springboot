@@ -11,6 +11,6 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new LoginInterceptor())
-                .addPathPatterns("/board/**"); // /board 이하 모든 경로에 적용
+                .addPathPatterns("/board/**");
     }
 }

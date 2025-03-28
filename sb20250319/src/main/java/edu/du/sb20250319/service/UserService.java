@@ -34,7 +34,7 @@ public class UserService {
         return userTbRepo.findAllByNo(no);
     }
 
-    // 글 쓰기
+    // 회원 정보 수정
     @Transactional
     public void updateUser(int no, UserDto userDto) {
         UserTb user = userTbRepo.findAllByNo(no);

@@ -38,6 +38,20 @@ public class UserController {
         return "redirect:/list";
     }
 
+//    @PostMapping("/edit/{no}")
+//    public String edit(@PathVariable int no, @ModelAttribute @Valid UserDto userDto,
+//                               BindingResult bindingResult) {
+//        if(userService.existsByEmail(userDto)){
+//            bindingResult.addError(new FieldError("userDto", "email", "해당 이메일이 이미 존재합니다."));
+//        }
+//        if (bindingResult.hasErrors()) {
+//            System.out.println("Validation errors: " + bindingResult.getAllErrors());
+//            return "user/edit";
+//        }
+//        userService.updateUser(no, userDto);
+//        return "redirect:/list";
+//    }
+
     @GetMapping("/delete/{no}")
     public String delete(@PathVariable int no) {
         userService.deleteByNo(no);

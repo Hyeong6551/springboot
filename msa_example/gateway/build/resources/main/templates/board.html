@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>board</title>
+</head>
+<body>
+<h1>게시글 목록</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>번호</th>
+        <th>제목</th>
+        <th>내용</th>
+    </tr>
+    </thead>
+    <tbody id="postList">
+    <!-- 게시글 목록이 여기에 동적으로 표시됩니다. -->
+    </tbody>
+</table>
+
+<script>
+    // 페이지가 로드될 때 호출될 함수
+    $(document).ready(function() {
+        loadPosts();
+    });
+
+    // 게시글 목록을 가져오는 함수
+    function loadPosts() {
+        $.ajax({
+            url: '/api/board',  // Spring Boot API 주소
+            method: 'GET',  // GET 요청
+            success: function(response) {
+                let html = '';
+                // 서버로부터 받은 게시글 목록을 HTML 테이블로 변환
+                response.forEach(function(post) {
+                    html += `
+                            <tr>
+                                <td>${post.id}</td>
+                                <td>${post.title}</td>
+                                <td>${post.description}</td>
+                            </tr>
+                        `;
+                });
+                // tbody에 게시글 목록을 추가
+                $('#postList').html(html);
+            },
+            error: function(error) {
+                console.error("게시글을 불러오는 중 오류 발생:", error);
+            }
+        });
+    }
+</script>
+</body>
+</html>

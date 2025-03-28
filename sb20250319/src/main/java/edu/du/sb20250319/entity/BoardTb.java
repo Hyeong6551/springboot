@@ -25,5 +25,4 @@ public class BoardTb {
     private String name;
 
     private LocalDateTime createdDate;
-    private int views;
 }

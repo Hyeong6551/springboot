@@ -1,0 +1,6 @@
+rootProject.name = 'msa_example'
+
+include 'eureka-server'
+include 'board-service'
+include 'gateway'
+

@@ -13,11 +13,10 @@
 <form th:action="@{/list/edit/{no}(no=${no})}" method="post" th:object="${userDto}">
     <input type="hidden" th:field="*{no}" />
     <div class="container my-5 w-50">
-        <h1>회원 수정</h1>
-        <p>Please fill in this form to create an account.</p>
+        <h1>회원 정보 수정</h1>
         <hr>
         <label for="password"><b>비밀번호</b></label><br>
-        <span class="errorMsg" th:errors="*{password}"></span>
+        <span class="errorMsg" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
         <input type="password" th:field="*{password}" placeholder="비밀번호를 입력해주세요" id="password" />
 
         <label for="name"><b>이름</b></label><br>
@@ -25,6 +24,7 @@
         <input type="text" th:field="*{name}" placeholder="이름을 입력해주세요" id="name" />
 
         <label for="email"><b>이메일</b></label>
+        <span class="errorMsg" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
         <input type="text" th:field="*{email}" placeholder="이메일을 입력해주세요" id="email" />
 
         <button type="submit" class="registerbtn">회원 정보 수정</button>

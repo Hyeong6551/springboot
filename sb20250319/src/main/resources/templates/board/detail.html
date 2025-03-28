@@ -19,12 +19,12 @@
             <p><strong>작성자:</strong> <span th:text="${boards.name}"></span></p>
             <p><strong>작성일:</strong> <span th:text="${#temporals.format(boards.createdDate, 'yyyy-MM-dd HH:mm')}"></span></p>
             <hr>
-            내용 <p class="card-text" th:text="${boards.content}"></p>
+            <strong>내용</strong><br><p class="card-text" th:text="${boards.content}"></p>
         </div>
     </div>
     <div class="text-end mt-3">
-        <a th:if="${session.user == boards.name}" th:href="@{/board/edit/{no}(no=${boards.no})}" class="btn btn-primary me-2">수정</a>
-        <a th:if="${session.user == boards.name}" th:href="@{/board/delete/{no}(no=${boards.no})}" class="btn btn-danger me-2">삭제</a>
+        <a th:if="${session.user == boards.name || session.user == 'admin'}" th:href="@{/board/edit/{no}(no=${boards.no})}" class="btn btn-primary me-2">수정</a>
+        <a th:if="${session.user == boards.name || session.user == 'admin'}" th:href="@{/board/delete/{no}(no=${boards.no})}" class="btn btn-danger me-2">삭제</a>
         <a href="/board" class="btn btn-secondary me-2">목록으로</a>
     </div>
 </div>

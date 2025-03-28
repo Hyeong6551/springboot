@@ -10,17 +10,17 @@
 <body>
 <div th:replace="~{common/header :: body}"></div>
 
-<form th:action="@{/write}" method="post" th:object="${boardDto}">
+<form th:action="@{/board/write}" method="post" th:object="${boardDto}">
     <div class="container my-5">
         <h2 class="mb-4">글 작성</h2>
         <div class="card">
             <div class="card-body">
-                <span class="errorMsg" th:if="${#fields.hasErrors('title')}" th:errors="*{name}"></span>
-                <strong>제목:</strong> <input type="text" th:field="*{title}" /></h4>
+                <strong>제목:</strong> <input type="text" th:field="*{title}" id="title"/></h4>
                 <hr>
+                <input type="hidden" th:field="*{name}" id="name" th:value="${session.user}" />
                 <p><strong>작성자:</strong> <h4 th:text="${session.user}"></h4></p>
                 <hr>
-                <input type="text" th:field="*{content}" />
+                <input type="text" th:field="*{content}" id="content" />
             </div>
         </div>
         <div class="text-end mt-3">

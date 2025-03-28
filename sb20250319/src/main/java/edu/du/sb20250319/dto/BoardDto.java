@@ -19,7 +19,6 @@ public class BoardDto {
     private String content;
     private String name;
     private LocalDateTime createdDate;
-    private int views;
 
     public int getNo() {
         return no;
@@ -41,10 +40,6 @@ public class BoardDto {
         return createdDate;
     }
 
-    public int getViews() {
-        return views;
-    }
-
     public void setNo(int no) {
         this.no = no;
     }
@@ -63,9 +58,5 @@ public class BoardDto {
 
     public void setCreatedDate(LocalDateTime createdDate) {
         this.createdDate = createdDate;
-    }
-
-    public void setViews(int views) {
-        this.views = views;
     }
 }

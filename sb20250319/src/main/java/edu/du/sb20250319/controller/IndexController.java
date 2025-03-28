@@ -12,6 +12,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
@@ -83,4 +84,24 @@ public class IndexController {
         userService.save(userTb);
         return "redirect:/";
     }
+
+//    @GetMapping("/edit/{no}")
+//    public String edit(@PathVariable int no, Model model) {
+//        UserTb user = userService.findAllByNo(no);
+//        model.addAttribute("userDto",user);
+//        return  "user/edit";
+//    }
+//
+//    @PostMapping("/edit/{no}")
+//    public String edit(@PathVariable int no, @ModelAttribute @Valid UserDto userDto,
+//                       BindingResult bindingResult) {
+//        if(userService.existsByEmail(userDto)){
+//            bindingResult.addError(new FieldError("userDto", "email", "해당 이메일이 이미 존재합니다."));
+//        }
+//        if (bindingResult.hasErrors()) {
+//            return "user/edit";
+//        }
+//        userService.updateUser(no, userDto);
+//        return "redirect:/list";
+//    }
 }

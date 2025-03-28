@@ -26,12 +26,12 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="board : ${boards}">
-          <td th:text="${board.no}"></td>
-          <td><a th:href="@{'/board/' + ${board.no}}" class="text-decoration-none" th:text="${board.title}"></a></td>
-          <td th:text="${board.name}"></td>
-          <td th:text="${#temporals.format(board.createdDate, 'yyyy-MM-dd HH:mm')}"></td>
-        </tr>
+          <tr th:each="board : ${boards}" th:url="@{'/board/' + ${board.no}}" onclick="goToPage(this)">
+            <td th:text="${board.no}"></td>
+            <td th:text="${board.title}"></td>
+            <td th:text="${board.name}"></td>
+            <td th:text="${#temporals.format(board.createdDate, 'yyyy-MM-dd HH:mm')}"></td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -39,5 +39,10 @@
 </div>
 
 <div th:replace="~{common/footer :: body}"></div>
+<script>
+  function goToPage(row) {
+    window.location.href = row.getAttribute("url");
+  }
+</script>
 </body>
 </html>

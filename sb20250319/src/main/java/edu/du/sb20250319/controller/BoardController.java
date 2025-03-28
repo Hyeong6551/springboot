@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.LocalDateTime;
 
 @Controller
 @RequestMapping("/board")
@@ -56,22 +57,24 @@ public class BoardController {
     }
 
     @GetMapping("/write")
-    public String write(Model model) {
-        model.addAttribute("boardDto", new BoardDto());
+    public String write(Model model, HttpSession session) {
+        String username = (String) session.getAttribute("user");
+        BoardDto boardDto = new BoardDto();
+        boardDto.setName(username);
+        model.addAttribute("boardDto", boardDto);
         return "board/write";
     }
 
     @PostMapping("/write")
-    public String writeForm(@ModelAttribute("boardDto") @Valid BoardDto boardDto,
-                               BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
-            return "board/write";
-        }
+    public String writeForm(@ModelAttribute("boardDto") BoardDto boardDto) {
+        boardDto.setCreatedDate(LocalDateTime.now());
         BoardTb boardTb = BoardTb.builder()
                 .title(boardDto.getTitle())
+                .name(boardDto.getName())
                 .content(boardDto.getContent())
+                .createdDate(boardDto.getCreatedDate())
                 .build();
         boardService.save(boardTb);
-        return "redirect:/";
+        return "redirect:/board";
     }
 }
